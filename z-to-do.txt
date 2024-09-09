@@ -1,0 +1,8 @@
+Próximos passos:
+
+- Criar os componentes da segunda tela:
+    1. Explorar tipos de entradas que o usuário pode interagir;
+    2. Explorar Css do React Native
+    3. Pesquisar animações de transição de tela/loading
+
+- Vincular as duas telas, fazendo a principal sumir e a secundária aparecer ao clicar no botão.
