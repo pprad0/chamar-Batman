@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center'
   },
   background: {
-    height:'100%',
+    height:'90%',
     backgroundColor: 'black',
   },
   batman: {
@@ -17,18 +17,4 @@ export const styles = StyleSheet.create({
     marginVertical: 50,
     marginHorizontal: 5
   },
-  buttonChamarBatman: {
-    borderColor : 'white',
-    borderWidth: 2.5,
-    borderRadius: 13,
-  },
-  textoButtonChamarBatman: {
-    color: 'lightgray',
-    fontFamily: 'sans-serif-medium',
-    paddingVertical: 10,
-    paddingHorizontal: 18
-    // fontFamily: 'arial',
-    // textShadowOffset: {width: 5, height: 5},
-    // textShadowColor: 'red',
-  }
 });
