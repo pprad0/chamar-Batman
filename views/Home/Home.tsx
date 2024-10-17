@@ -1,41 +1,28 @@
 import React, { useState } from "react";
 
-import { styles } from "./HomeStyles";
-import { SignalButton } from "../../components/SignalButton/SignalButton";
 import { StatusBar } from "expo-status-bar";
-import { BatForm } from "../../components/BatForm/BatForm";
+import  BatForm  from "../../components/BatForm/BatForm";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { Button, Switch, Text, TouchableOpacity, View } from "react-native";
-
-// const handleHomeButton = () => {
-//   const [toggle, setToggle] = useState();
-
-// }
+import SignalButton from "../../components/SignalButton/SignalButton";
 
 export const Home = () => {
-  const [showButton, setShowButton] = useState(true);
-  const [showFirstComponent, setShowFirstComponent] = useState(true);
+  const [showBatSinal, setShowBatSinal] = useState(true);
 
   const toggleComponent = () => {
-    setShowFirstComponent(!showFirstComponent);
-    setShowButton(false); // Esconde o botão ao clicar
+    setShowBatSinal(!showBatSinal);
   };
 
   return (
-    <View style={{ backgroundColor: showFirstComponent ? 'black' : 'white', height: '100%' }}>
-
-    <View style={styles.container}>
-      {showFirstComponent ? <SignalButton /> : <BatForm />}
-
-      {showButton && (
-        <TouchableOpacity style={styles.buttonChamarBatman} onPress={toggleComponent}>
-          <Text style={styles.textoButtonChamarBatman}>
-            CHAMAR HOMEM-MORCEGO
-          </Text>
-        </TouchableOpacity>
+    <SafeAreaView style={{flex: 1,}}>
+      <StatusBar />
+      <View>
+      {showBatSinal ? (
+        <SignalButton toggleComponent={toggleComponent} />  
+      ) : (
+        <BatForm toggleComponent={toggleComponent}  />  
       )}
     </View>
-
-    </View>
-    
+    </SafeAreaView>
   );
 };
